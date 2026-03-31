@@ -3,8 +3,8 @@ import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
 import { MistralAIEmbeddings } from "@langchain/mistralai"
 import dotenv from 'dotenv';
 import { Pinecone } from '@pinecone-database/pinecone'
-dotenv.config();
 import fs from 'fs';
+dotenv.config();
 
 const pc = new Pinecone({ apiKey: process.env.PINECONE_API_KEY });
 const index = pc.index("cohort-2-rag")
